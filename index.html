@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -368,6 +367,111 @@ section {
   overflow: hidden;
 }
 
+/* --- Master's thesis / research section --- */
+.thesis-box {
+  padding: 2.5rem;
+}
+
+.thesis-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.3);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.2rem;
+}
+
+.thesis-badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.2);
+}
+
+.thesis-meta {
+  font-size: 0.95rem;
+  color: var(--accent2);
+  font-weight: 500;
+  margin-bottom: 1.5rem !important;
+}
+
+.thesis-box h3 {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  line-height: 1.35;
+  margin-bottom: 1.2rem;
+}
+
+.thesis-box p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pillar {
+  background: rgba(59,130,246,0.06);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.pillar h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.pillar span {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.thesis-goals {
+  list-style: none;
+  margin: 0 0 2rem;
+}
+
+.thesis-goals li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.thesis-goals li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .thesis-box {
+    padding: 1.6rem;
+  }
+}
+
 .timeline {
   max-width: 900px;
   margin: auto;
@@ -470,6 +574,7 @@ footer {
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#stack">Stack</a></li>
+    <li><a href="#thesis">Research</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -574,6 +679,76 @@ footer {
     <span>Cisco Packet Tracer</span>
     <span>Firebase</span>
     <span>Networking</span>
+  </div>
+
+</section>
+
+<section id="thesis">
+
+  <h2 class="section-title" data-aos="fade-up">Research <span> Master&rsquo;s Graduation Project </span></h2>
+
+  <div class="featured-box thesis-box" data-aos="fade-up">
+
+    <div class="thesis-badge">In progress</div>
+
+    <h3>A Multimodal Deep Learning Framework for Automatic Salient Event Detection in Recorded Sessions</h3>
+
+    <p class="thesis-meta">
+      Master&rsquo;s thesis &mdash; Master 2 RTIC (Networks and Information &amp; Communication Technologies),
+      final year. Preceded by a Licence degree in Computer Science.
+    </p>
+
+    <p>
+      This research designs and develops a multimodal deep learning framework for the automatic
+      detection of salient events in recorded sessions &mdash; online lectures, professional meetings,
+      webinars and conferences. The approach leverages several sources of information at once
+      (audiovisual content, speech transcripts and semantic cues) to identify the most relevant and
+      informative segments of a session.
+    </p>
+
+    <p>
+      Features extracted from each modality are fused inside a multimodal deep learning architecture
+      that detects significant events such as key explanations, demonstrations, decision-making
+      moments and conclusions.
+    </p>
+
+    <div class="pillars">
+
+      <div class="pillar">
+        <h4>Natural Language Processing</h4>
+        <span>Speech transcripts and semantic cues used to locate meaningful discourse.</span>
+      </div>
+
+      <div class="pillar">
+        <h4>Computer Vision</h4>
+        <span>Visual features from slides, demonstrations and on-screen activity.</span>
+      </div>
+
+      <div class="pillar">
+        <h4>Audio Analysis</h4>
+        <span>Acoustic patterns and speaker dynamics signalling important moments.</span>
+      </div>
+
+    </div>
+
+    <ul class="thesis-goals">
+      <li>Cut down the time needed to review long recordings by giving rapid access to essential information.</li>
+      <li>Support automatic video summarization of recorded sessions.</li>
+      <li>Enable intelligent indexing of multimedia content.</li>
+      <li>Build towards smart tools for learning assistance and knowledge management.</li>
+    </ul>
+
+    <div class="project-tech">
+      <span>Deep Learning</span>
+      <span>Multimodal Fusion</span>
+      <span>NLP</span>
+      <span>Computer Vision</span>
+      <span>Audio Analysis</span>
+      <span>Video Summarization</span>
+      <span>Python</span>
+      <span>PyTorch</span>
+    </div>
+
   </div>
 
 </section>
@@ -765,4 +940,3 @@ menuBtn.addEventListener('click', () => {
 
 </body>
 </html>
-```
